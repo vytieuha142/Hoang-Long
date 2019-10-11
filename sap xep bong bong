@@ -1,0 +1,34 @@
+package hom_traning;
+
+public class project2 {
+
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		
+		System.out.println("Hãy Nhập Chuỗi Bạn Muốn :");
+		int[] Chuoi = new int[5];
+		Chuoi[0] = new java.util.Scanner(System.in).nextInt();
+		Chuoi[1] = new java.util.Scanner(System.in).nextInt();
+		Chuoi[2] = new java.util.Scanner(System.in).nextInt();
+		Chuoi[3] = new java.util.Scanner(System.in).nextInt();
+		Chuoi[4] = new java.util.Scanner(System.in).nextInt();
+		System.out.print("Chuỗi bạn vừa nhập là: ");
+		int j=0;int i=0;int giatrihoandoitrunggian=0;
+		for (j=0;j<Chuoi.length;j++) {
+		System.out.print(Chuoi[j] + " ");
+		}
+		System.out.println("");
+		System.out.println("Giá trị của chuỗi sau khi sắp xếp từ lớn đến bé là : ");
+		for (i = 0; i < Chuoi.length; i++) {
+			for (j = 0; j < Chuoi.length - 1 - i ; j++) {
+				if (Chuoi[j] > Chuoi[j + 1]) {
+					giatrihoandoitrunggian = Chuoi[j];
+					Chuoi[j] = Chuoi[j + 1];
+					Chuoi[j + 1] = giatrihoandoitrunggian;
+				}
+			}
+			System.out.println(Chuoi[j]);
+		}
+	}
+}
+
